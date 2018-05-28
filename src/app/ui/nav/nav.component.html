@@ -1,0 +1,17 @@
+<nav>
+  <div class="brand">Roast</div>
+  <div class="links" [ngClass]="{'show':navOpen}">
+    <ul>
+      <li>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </li>
+    </ul>
+  </div>
+  <div class="mobile-tap">
+    <i (click)="toggleNav()" class="material-icons">
+        {{ icon }}
+    </i>
+  </div>
+</nav>
