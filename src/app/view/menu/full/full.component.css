@@ -1,0 +1,42 @@
+.full{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.menu-item{
+    display: flex;
+    flex-direction: column;
+    background: red;
+}
+
+.menu-item-heading{
+    display: flex;
+    flex-direction: row;
+    background: blue;
+}
+
+.menu-item-title{
+    display: flex;
+    background: pink;
+}
+
+.menu-item-divider{
+    display: flex;
+    flex-grow: 1;
+    background: purple;
+}
+
+.menu-item-price{
+    display: flex;
+    background: orange;
+}
+
+hr {
+    border:none;
+    border-top:1px dotted #f00;
+    color:#fff;
+    background-color:#fff;
+    height:2px;
+    width:50%;
+  }
