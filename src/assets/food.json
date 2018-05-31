@@ -1,0 +1,26 @@
+{
+  "results": [
+    {
+        "omlettes":[
+            {
+                "title": "Cauliflower and Feta Omelet",
+                "ingredients": "eggs, olive oil, feta cheese, parsley, garlic, cauliflower"
+            },
+            {
+                "title": "Bacon Potato Omelet",
+                "ingredients": "bacon, cheddar cheese, eggs, onions, potato, salt"
+            },
+            {
+                "title": "Bacon and Sour Cream Omelet",
+                "ingredients": "eggs, water, bacon, green onion, sour cream, butter"
+            }
+        ],
+        "vegan":[
+            {
+            "title": "Vegan Bacon",
+            "ingredients": "tofu, liquid smoke flavoring, yeast, vegetable oil, soy sauce"
+            }
+        ]
+    }
+  ]
+}
