@@ -1,9 +1,9 @@
 nav{
     min-height: 60px;
-    background: #2b2b2b;
+    background: #F6881E;
     display: flex;
     padding:0 1em;
-    color:#eee;
+    color: #2C1808;
 }
 
 .brand{
@@ -31,7 +31,7 @@ nav{
 }
 
 .links>ul>li>a{
-    color:#eee;
+    color:#2C1808;
     padding-right:1.5em;
     text-decoration: none;
 }
@@ -49,7 +49,7 @@ nav{
 @media only screen and (max-width: 420px) {
     nav{
         overflow: hidden;
-        background-color: #333;
+        background-color: #F6881E;
         position: fixed;
         bottom: 0;
         width: 100%;
