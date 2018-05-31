@@ -1,8 +1,7 @@
 <div class="full">
-    <div class="menu-item" *ngFor="let food of data.results; let i = index">
+    <div class="menu-item" >
             <div class="menu-item-heading">
                 <div class="menu-item-title">
-                    {{ food.title }}
                 </div>
                 <div class="menu-item-divider"></div>
                 <div clas="menu-item-price">
@@ -10,9 +9,6 @@
                 </div>
             </div>
             <div class="menu-item-description">
-                {{ food.ingredients }}
             </div>
     </div>
 </div>
-
-<div (click)="getData()">Click</div>
