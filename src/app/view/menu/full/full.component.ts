@@ -11,18 +11,14 @@ import { JsonService } from '../../../services/json.service';
 export class FullComponent implements OnInit {
   constructor(private http: HttpClient, private jsonService: JsonService) {}
 
-  ngOnInit() {
-    this.jsonService.getJSON().subscribe(data => {
-    });
-  }
+  public fooddata:any;
 
-  getData() {
-    // this.http.get('http://www.recipepuppy.com/api/?i=bacon,garlic&q=omelet&p=3')
-    //   .subscribe(
-    //     (data: any[]) => {
-    //       console.log(data);
-    //     }
-    //   );
-    // console.log(this.data);
+  ngOnInit() {}
+
+  ngAfterContentInit(){
+    this.jsonService.getJSON().subscribe(data => {
+      this.fooddata = data;
+      console.log(this.fooddata);
+    });
   }
 }

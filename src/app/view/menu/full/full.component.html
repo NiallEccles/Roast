@@ -1,14 +1,36 @@
-<div class="full">
-    <div class="menu-item" >
+<div class="full" *ngIf="fooddata">
+    <div class="menu-item-category">
+        <h3>Omlettes</h3>
+        <div class="menu-item" *ngFor="let food of fooddata.omlettes; let i = index;">
             <div class="menu-item-heading">
                 <div class="menu-item-title">
+                    {{ food.title }}
                 </div>
                 <div class="menu-item-divider"></div>
                 <div clas="menu-item-price">
-                    €6.99
+                    {{ food.price }}
+                </div>
+                <div class="menu-item-description">
+                    {{ food.ingredients }}
                 </div>
             </div>
-            <div class="menu-item-description">
+        </div>
+    </div>
+    <div class="menu-item-category">
+        <h3>Vegan</h3>
+        <div class="menu-item" *ngFor="let food of fooddata.vegan; let i = index;">
+            <div class="menu-item-heading">
+                <div class="menu-item-title">
+                    {{ food.title }}
+                </div>
+                <div class="menu-item-divider"></div>
+                <div clas="menu-item-price">
+                    {{ food.price }}
+                </div>
+                <div class="menu-item-description">
+                    {{ food.ingredients }}
+                </div>
             </div>
+        </div>
     </div>
 </div>

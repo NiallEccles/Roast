@@ -1,26 +1,26 @@
 {
-  "results": [
-    {
-        "omlettes":[
-            {
-                "title": "Cauliflower and Feta Omelet",
-                "ingredients": "eggs, olive oil, feta cheese, parsley, garlic, cauliflower"
-            },
-            {
-                "title": "Bacon Potato Omelet",
-                "ingredients": "bacon, cheddar cheese, eggs, onions, potato, salt"
-            },
-            {
-                "title": "Bacon and Sour Cream Omelet",
-                "ingredients": "eggs, water, bacon, green onion, sour cream, butter"
-            }
-        ],
-        "vegan":[
-            {
+    "omlettes":[
+        {
+            "title": "Cauliflower and Feta Omelet",
+            "ingredients": "eggs, olive oil, feta cheese, parsley, garlic, cauliflower",
+            "price": "6.99"
+        },
+        {
+            "title": "Bacon Potato Omelet",
+            "ingredients": "bacon, cheddar cheese, eggs, onions, potato, salt",
+            "price": "6.99"
+        },
+        {
+            "title": "Bacon and Sour Cream Omelet",
+            "ingredients": "eggs, water, bacon, green onion, sour cream, butter",
+            "price": "6.99"
+        }
+    ],
+    "vegan":[
+        {
             "title": "Vegan Bacon",
-            "ingredients": "tofu, liquid smoke flavoring, yeast, vegetable oil, soy sauce"
-            }
-        ]
-    }
-  ]
+            "ingredients": "tofu, liquid smoke flavoring, yeast, vegetable oil, soy sauce",
+            "price": "6.99"
+        }
+    ]
 }

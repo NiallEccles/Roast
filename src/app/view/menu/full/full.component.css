@@ -4,6 +4,10 @@
     margin: auto;
 }
 
+.menu-item-category>h3{
+    padding: 0 1em;
+}
+
 .menu-item{
     display: flex;
     flex-direction: column;
@@ -14,7 +18,7 @@
 
 .menu-item-heading{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .menu-item-title{
@@ -28,4 +32,8 @@
 
 .menu-item-price{
     display: flex;
+}
+
+.margin-bottom{
+    margin-bottom: 60px;
 }
