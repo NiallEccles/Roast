@@ -11,5 +11,7 @@ body{
 @media screen and (max-width: 420px){
     body{
         padding-bottom: 60px;
+        /* background: #2C1808; */
+        color: #2C1808; 
     }
 }

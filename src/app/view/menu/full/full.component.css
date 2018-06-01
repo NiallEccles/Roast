@@ -9,20 +9,20 @@
 }
 
 .menu-item{
-    display: flex;
-    flex-direction: column;
-    background:grey;
+    flex-direction: row;
     padding: 1em;
     margin: 0.5em 0;
 }
 
 .menu-item-heading{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-grow: 1;
 }
 
 .menu-item-title{
     display: flex;
+    flex-grow: 1;
 }
 
 .menu-item-divider{
@@ -36,4 +36,10 @@
 
 .margin-bottom{
     margin-bottom: 60px;
+}
+
+.menu-item-info{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
