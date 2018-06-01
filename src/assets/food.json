@@ -1,4 +1,11 @@
-{
+{   
+    "pork":[
+        {
+            "title": "Succulent Pork Roast",
+            "ingredients": "brown sugar, garlic, pork chops, water",
+            "price": "6.99"
+        }
+    ],
     "omlettes":[
         {
             "title": "Cauliflower and Feta Omelet",
@@ -20,6 +27,28 @@
         {
             "title": "Vegan Bacon",
             "ingredients": "tofu, liquid smoke flavoring, yeast, vegetable oil, soy sauce",
+            "price": "6.99"
+        },
+        {
+            "title": "Pasta Salad w/ Mixed Vegetables",
+            "ingredients": "basil, pasta, garlic, green pepper, mushroom, olive oil, onions, oregano, red pepper, romaine lettuce, zucchini",
+            "price": "6.99"
+        },
+        {
+            "title": "Fresh Tomato Salad",
+            "ingredients": "cucumber, garlic, green pepper, onions, parsley, salt, tomato, white wine vinegar",
+            "price": "6.99"
+        },
+        {
+            "title": "Garbanzo Tomato Pasta Soup",
+            "ingredients": "basil, thyme, garlic, olive oil, onions, salt, seashell pasta",
+            "price": "6.99"
+        }   
+    ],
+    "hot drinks":[
+        {
+            "title": "Hot Spiced Cider",
+            "ingredients": "allspice, apple cider, brown sugar, cinnamon, cloves, nutmeg, orange, salt",
             "price": "6.99"
         }
     ]
