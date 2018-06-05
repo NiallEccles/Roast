@@ -1,0 +1,16 @@
+.basket{
+    display: flex;
+}
+
+.basket-item{
+    flex-grow: 1;
+    margin-bottom: 1em;
+}
+
+.basket-container{
+    padding: 0 1em;
+}
+
+.basket-item-actions{
+    color:#f6871f;
+}

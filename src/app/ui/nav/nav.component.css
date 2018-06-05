@@ -60,6 +60,8 @@ nav{
     }
     .links.show{
         display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .mobile-tap{
         display: flex;

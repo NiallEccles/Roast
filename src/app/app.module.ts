@@ -9,10 +9,14 @@ import { NavComponent } from './ui/nav/nav.component';
 import { HomeComponent } from './view/home/home.component';
 import { MenuComponent } from './view/menu/menu.component';
 import { FullComponent } from './view/menu/full/full.component';
+import { StoreModule } from '@ngrx/store';
+import { reducer } from './store/reducers/basket.reducer';
+import { BasketComponent } from './ui/basket/basket.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'menu/full', component: FullComponent },
+  { path: 'basket', component: BasketComponent },
 ];
 
 @NgModule({
@@ -21,7 +25,8 @@ const appRoutes: Routes = [
     NavComponent,
     HomeComponent,
     MenuComponent,
-    FullComponent
+    FullComponent,
+    BasketComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,10 @@ const appRoutes: Routes = [
       { enableTracing: false }
     ),
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    StoreModule.forRoot({
+      basket: reducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

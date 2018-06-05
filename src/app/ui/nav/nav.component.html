@@ -1,10 +1,10 @@
 <nav>
-  <div class="brand">Roast</div>
+  <div class="brand" [routerLink]="['/']">Roast</div>
   <div class="links" [ngClass]="{'show':navOpen}">
     <ul>
       <li>
         <a href="" [routerLink]="['/menu/full']">Menu</a>
-        <a href="#">Link 2</a>
+        <a href="" [routerLink]="['/basket']">Basket</a>
         <a href="#">Link 3</a>
       </li>
     </ul>

@@ -1,0 +1,7 @@
+<h2>My basket</h2>
+<div class="basket-container">
+  <div class="basket" *ngFor = "let baske of basket | async; let i = index">
+      <div class="basket-item">{{ baske.item }}</div>
+      <div class="basket-item-actions" (click)="removeBasketItem(i)">remove</div>
+    </div>
+</div>
