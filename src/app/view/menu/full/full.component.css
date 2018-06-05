@@ -6,6 +6,7 @@
 
 .menu-item-category>h3{
     padding: 0 1em;
+    color: #f6871f;
 }
 
 .menu-item{
@@ -34,6 +35,7 @@
 .menu-item-price{
     display: flex;
     font-size: 0.8rem;
+    color: #f6871f;
 }
 
 .margin-bottom{
