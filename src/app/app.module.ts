@@ -12,11 +12,13 @@ import { FullComponent } from './view/menu/full/full.component';
 import { StoreModule } from '@ngrx/store';
 import { reducer } from './store/reducers/basket.reducer';
 import { BasketComponent } from './ui/basket/basket.component';
+import { AccountComponent } from './view/account/account.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'menu/full', component: FullComponent },
   { path: 'basket', component: BasketComponent },
+  { path: 'account', component: AccountComponent },
 ];
 
 @NgModule({
@@ -26,7 +28,8 @@ const appRoutes: Routes = [
     HomeComponent,
     MenuComponent,
     FullComponent,
-    BasketComponent
+    BasketComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
