@@ -39,3 +39,4 @@ Thumbs.db
 
 #environment
 /environments
+src/environments/environment.ts
