@@ -3,6 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { JsonService } from '../../../services/json.service';
 import { trigger,style,transition,animate,keyframes,query,stagger } from '@angular/animations';
+import { Store } from '@ngrx/store';
+import { BasketState } from '../../../store/app.state';
+import { Basket } from '../../../store/models/basket.model'
+import * as BasketActions from '../../../store/actions/basket.actions';
 
 @Component({
   selector: 'app-full',
@@ -25,11 +29,15 @@ import { trigger,style,transition,animate,keyframes,query,stagger } from '@angul
   ]
 })
 export class FullComponent implements OnInit {
-  constructor(private http: HttpClient, private jsonService: JsonService) {}
+  constructor(private http: HttpClient, private jsonService: JsonService, private store: Store<BasketState>) {}
 
   goals = ['My first life goal', 'I want to climb a mountain', 'Go ice skiing'];
 
   public fooddata:any;
+
+  getMenuItem(item){
+    this.store.dispatch(new BasketActions.AddBasket({item: item.title, price: item.price}))
+  }
 
   ngOnInit() {}
 

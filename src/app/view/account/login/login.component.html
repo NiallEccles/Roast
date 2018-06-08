@@ -1,0 +1,30 @@
+<div class="signup">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <label for="email">Email</label>
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="email" 
+          ngModel 
+          name="email"
+          email
+          required
+          #emailInput="ngModel"
+        >
+        <!-- <span *ngIf="emailInput.hasError('required')"> Email must not be empty </span> -->
+        <br>
+        <label for="password">Password</label>
+        <input 
+          type="password" 
+          name="password" 
+          placeholder="password" 
+          ngModel 
+          name="password"
+          required
+          minlength="6"
+          #pwInput="ngModel"
+        >
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+  </div>
