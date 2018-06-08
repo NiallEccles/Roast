@@ -1,12 +1,18 @@
 <nav>
   <div class="brand" [routerLink]="['/']">Roast</div>
   <div class="links" [ngClass]="{'show':navOpen}">
-    <ul>
+    <ul *ngIf="isAuth">
       <li>
         <a href="" [routerLink]="['/menu/full']">Menu</a>
         <a href="" [routerLink]="['/basket']">Basket</a>
         <a href="" [routerLink]="['/account']">Account</a>
       </li>
+    </ul>
+    <ul *ngIf="!isAuth">
+      <li>
+          <a href="" [routerLink]="['/account/login']">Login</a>
+          <a href="" [routerLink]="['/account/signup']">Signup</a>
+        </li>          
     </ul>
   </div>
   <div class="mobile-tap">

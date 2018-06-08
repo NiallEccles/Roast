@@ -17,14 +17,16 @@ import { AccountComponent } from './view/account/account.component';
 import { SignupComponent } from './view/account/signup/signup.component';
 import { LoginComponent } from './view/account/login/login.component';
 import { AuthService } from './services/auth/auth.service';
+import { AuthGuard } from './services/auth/auth.guard';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'menu/full', component: FullComponent },
-  { path: 'basket', component: BasketComponent },
+  { path: 'menu/full', component: FullComponent, canActivate: [AuthGuard] },
+  { path: 'basket', component: BasketComponent, canActivate: [AuthGuard] },
   { path: 'account', component: AccountComponent },
   { path: 'account/signup', component: SignupComponent },
   { path: 'account/login', component: LoginComponent },
+  { path: 'logout', component: HomeComponent },
 ];
 
 @NgModule({
@@ -52,7 +54,10 @@ const appRoutes: Routes = [
     }),
     FormsModule
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
