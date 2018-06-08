@@ -34,9 +34,10 @@ export class AuthService {
   }
 
   logout() {
-      this.isAuthenticated = false;
+      this.roastauth.auth.signOut();
       this.authChange.next(false);
       this.router.navigate(['/logout']);
+      this.isAuthenticated = false;
   }
 
   isAuth() {
