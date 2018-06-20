@@ -22,6 +22,7 @@ import { SignupComponent } from './view/account/signup/signup.component';
 import { LoginComponent } from './view/account/login/login.component';
 import { AuthService } from './services/auth/auth.service';
 import { AuthGuard } from './services/auth/auth.guard';
+import { TermsComponent } from './view/terms/terms.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -31,6 +32,7 @@ const appRoutes: Routes = [
   { path: 'account/signup', component: SignupComponent },
   { path: 'account/login', component: LoginComponent },
   { path: 'logout', component: HomeComponent },
+  { path: 'terms-and-conditions', component: TermsComponent },
 ];
 
 @NgModule({
@@ -43,7 +45,8 @@ const appRoutes: Routes = [
     BasketComponent,
     AccountComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,
