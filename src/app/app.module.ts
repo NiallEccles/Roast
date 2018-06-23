@@ -32,6 +32,7 @@ const appRoutes: Routes = [
   { path: 'account/signup', component: SignupComponent },
   { path: 'account/login', component: LoginComponent },
   { path: 'logout', component: HomeComponent },
+  { path: 'terms-and-conditions', component: TermsComponent },
 ];
 
 @NgModule({
