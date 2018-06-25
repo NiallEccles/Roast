@@ -26,7 +26,7 @@ import { TermsComponent } from './view/terms/terms.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'menu/full', component: FullComponent, canActivate: [AuthGuard] },
+  { path: 'menu/full', component: FullComponent,  },
   { path: 'basket', component: BasketComponent, canActivate: [AuthGuard] },
   { path: 'account', component: AccountComponent },
   { path: 'account/signup', component: SignupComponent },

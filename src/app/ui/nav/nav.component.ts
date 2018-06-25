@@ -15,6 +15,7 @@ export class NavComponent implements OnInit, OnDestroy {
   public navOpen = false;
 
   public icon = 'menu';
+  public showNotification = false;
 
   ngOnInit() {
     this.authSubscription = this.authService.authChange.subscribe(authStatus => {
@@ -34,6 +35,10 @@ export class NavComponent implements OnInit, OnDestroy {
       this.navOpen = false;
       this.icon = 'menu';
     }
+  }
+
+  hasNotification() {
+    this.showNotification = true;
   }
 
 }
