@@ -1,0 +1,14 @@
+.full{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.full>h1, .full>h2{
+    padding: 0 1em;
+    text-align: center;
+}
+
+.full>p{
+    padding: 0 1em;
+}

@@ -1,0 +1,36 @@
+.signup{
+    min-height: 50vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 1em;
+}
+
+.input-field{
+   margin: 0.5em 0;
+   padding: 0.5em 1em;
+   border: 2px solid #2C1808;
+   color:#2C1808;
+   font-family: League Spartan;
+}
+
+.button{
+    margin: 0.5em 0;
+    padding: 0.5em 1em;
+    border: 2px solid #2C1808;
+    color:#2C1808;
+    background: #ffffff;
+    font-family: League Spartan; 
+    transition: 300ms all ease-in-out;
+    cursor: pointer;
+}
+
+.button:hover{
+    color: #F6881E;
+    border: 2px solid #F6881E;
+    transition: 300ms all ease-in-out;
+    cursor: pointer;
+}
+
