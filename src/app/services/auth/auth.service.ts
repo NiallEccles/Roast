@@ -9,7 +9,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 export class AuthService {
   authChange = new Subject<boolean>();
   private isAuthenticated = false;
-  public auth_error: Observable<any>;
+  authError = new Subject<string>();
 
   constructor(private router: Router, private roastauth: AngularFireAuth) {}
 
@@ -30,8 +30,7 @@ export class AuthService {
         this.authSuccessfully();
     })
     .catch(error => {
-        // console.log(error.code);
-        this.auth_error = error.code;
+        this.authError.next(error.message);
     });
   }
 
@@ -44,6 +43,10 @@ export class AuthService {
 
   isAuth() {
       return this.isAuthenticated;
+  }
+
+  public authFailure() {
+    this.authError.next('An error has occured.');
   }
 
   private authSuccessfully() {
