@@ -41,6 +41,14 @@ nav, .notification{
     text-decoration: underline;
 }
 
+.notification{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-100px);
+}
+
 .notification-message{
     white-space: nowrap; 
     overflow: hidden;
@@ -51,6 +59,21 @@ nav, .notification{
 .notification-close{
     display: flex;
     align-items: center;
+}
+
+.show-notification{
+    animation-name: show;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+
+@keyframes show {
+    0%   {transform: translateY(-100px)}
+    25%   {transform: translateY(0px)}
+    50%   {transform: translateY(0px)}
+    75%   {transform: translateY(0px)}
+    100% {transform: translateY(-100px)}
 }
 
 @media only screen and (min-width: 420px){
@@ -79,5 +102,12 @@ nav, .notification{
         display: flex;
         flex-grow: 1;
         padding-right: 2em;
+    }
+    .notification{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: fit-content;
     }
 }

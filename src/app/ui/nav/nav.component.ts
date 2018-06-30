@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AuthService } from '../../services/auth/auth.service';
-import { Subscription } from 'rxjs';
+import { Subscription, Subject } from 'rxjs';
+import { NotificationService } from '../../services/notification/notification.service';
 
 @Component({
   selector: '.nav',
@@ -11,11 +12,23 @@ import { Subscription } from 'rxjs';
 export class NavComponent implements OnInit, OnDestroy {
   isAuth: boolean;
   authSubscription: Subscription;
-  constructor(private authService: AuthService) {}
+
   public navOpen = false;
 
   public icon = 'menu';
   public showNotification = false;
+  public foodAdded;
+
+  constructor(private authService: AuthService, private notification: NotificationService) {
+    this.notification.foodAdded.subscribe(e => {
+      this.foodAdded = e;
+      this.showNotification = true;
+      setTimeout(() => {
+        this.showNotification = false;
+        this.foodAdded = null;
+      }, 2000);
+     });
+  }
 
   ngOnInit() {
     this.authSubscription = this.authService.authChange.subscribe(authStatus => {
