@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, Validators } from '@angular/forms';
 import { AuthService } from '../../../services/auth/auth.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { AuthService } from '../../../services/auth/auth.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+
+  public _error: string;
 
   constructor(private authService: AuthService) { }
 
@@ -20,6 +22,7 @@ export class SignupComponent implements OnInit {
       email: form.value.email,
       password: form.value.password
     });
+    this.authService.authError.subscribe(error => this._error = error);
   }
 
 }

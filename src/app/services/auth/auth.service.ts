@@ -20,7 +20,7 @@ export class AuthService {
           this.authSuccessfully();
       })
       .catch(error => {
-          console.log(error);
+        this.authError.next(error.message);
       });
   }
   login(authData: AuthData) {
@@ -43,10 +43,6 @@ export class AuthService {
 
   isAuth() {
       return this.isAuthenticated;
-  }
-
-  public authFailure() {
-    this.authError.next('An error has occured.');
   }
 
   private authSuccessfully() {
