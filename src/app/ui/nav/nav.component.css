@@ -69,11 +69,11 @@ nav, .notification{
 }
 
 @keyframes show {
-    0%   {transform: translateY(-100px)}
+    0%   {transform: translateY(100px)}
     25%   {transform: translateY(0px)}
     50%   {transform: translateY(0px)}
     75%   {transform: translateY(0px)}
-    100% {transform: translateY(-100px)}
+    100% {transform: translateY(100px)}
 }
 
 @media only screen and (min-width: 420px){
@@ -109,5 +109,12 @@ nav, .notification{
         top: 0;
         left: 0;
         height: fit-content;
+    }
+    @keyframes show {
+        0%   {transform: translateY(-100px)}
+        25%   {transform: translateY(0px)}
+        50%   {transform: translateY(0px)}
+        75%   {transform: translateY(0px)}
+        100% {transform: translateY(-100px)}
     }
 }
