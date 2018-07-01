@@ -3,18 +3,20 @@
     <div class="menu-item-category">
         <h3>Pork</h3>
         <div class="menu-item" *ngFor="let food of fooddata.pork; let i = index;">
-            <div class="menu-item-heading" (click)="getMenuItem(food)">
-                <div class="menu-item-title">
-                    {{ food.title }}
+            <div (click)="getMenuItem(food)">
+                <div class="menu-item-heading">
+                    <div class="menu-item-title">
+                        {{ food.title }}
+                    </div>
+                    <div class="menu-item-divider"></div>
+                    <div class="menu-item-price">
+                        €{{ food.price }}
+                    </div>
                 </div>
-                <div class="menu-item-divider"></div>
-                <div class="menu-item-price">
-                    €{{ food.price }}
-                </div>
-            </div>
-            <div class="menu-item-info">
-                <div class="menu-item-description">
-                    {{ food.ingredients }}
+                <div class="menu-item-info">
+                    <div class="menu-item-description">
+                        {{ food.ingredients }}
+                    </div>
                 </div>
             </div>
         </div>
@@ -22,18 +24,20 @@
     <div class="menu-item-category">
         <h3>Omlettes</h3>
         <div class="menu-item" *ngFor="let food of fooddata.omlettes; let i = index;">
-            <div class="menu-item-heading" (click)="getMenuItem(food)">
-                <div class="menu-item-title">
-                    {{ food.title }}
+            <div (click)="getMenuItem(food)">
+                <div class="menu-item-heading">
+                    <div class="menu-item-title">
+                        {{ food.title }}
+                    </div>
+                    <div class="menu-item-divider"></div>
+                    <div class="menu-item-price">
+                        €{{ food.price }}
+                    </div>
                 </div>
-                <div class="menu-item-divider"></div>
-                <div class="menu-item-price">
-                    €{{ food.price }}
-                </div>
-            </div>
-            <div class="menu-item-info">
-                <div class="menu-item-description">
-                    {{ food.ingredients }}
+                <div class="menu-item-info">
+                    <div class="menu-item-description">
+                        {{ food.ingredients }}
+                    </div>
                 </div>
             </div>
         </div>
@@ -41,18 +45,20 @@
     <div class="menu-item-category">
         <h3>Vegan</h3>
         <div class="menu-item" *ngFor="let food of fooddata.vegan; let i = index;">
-            <div class="menu-item-heading" (click)="getMenuItem(food)">
-                <div class="menu-item-title">
-                    {{ food.title }}
+            <div (click)="getMenuItem(food)">
+                <div class="menu-item-heading">
+                    <div class="menu-item-title">
+                        {{ food.title }}
+                    </div>
+                    <div class="menu-item-divider"></div>
+                    <div class="menu-item-price">
+                        €{{ food.price }}
+                    </div>
                 </div>
-                <div class="menu-item-divider"></div>
-                <div class="menu-item-price">
-                    €{{ food.price }}
-                </div>
-            </div>
-            <div class="menu-item-info">
-                <div class="menu-item-description">
-                    {{ food.ingredients }}
+                <div class="menu-item-info">
+                    <div class="menu-item-description">
+                        {{ food.ingredients }}
+                    </div>
                 </div>
             </div>
         </div>
