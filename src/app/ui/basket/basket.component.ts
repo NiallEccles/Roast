@@ -29,7 +29,6 @@ export class BasketComponent implements OnInit {
   }
 
   isBasketEmpty(){
-    console.log(this.basketArray);
     if(this.basketArray.source.value.basket.length === 0){
       return true;
     }
