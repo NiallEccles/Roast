@@ -23,6 +23,7 @@ import { LoginComponent } from './view/account/login/login.component';
 import { AuthService } from './services/auth/auth.service';
 import { AuthGuard } from './services/auth/auth.guard';
 import { TermsComponent } from './view/terms/terms.component';
+import { SliderloaderComponent } from './components/sliderloader/sliderloader.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -46,7 +47,8 @@ const appRoutes: Routes = [
     AccountComponent,
     SignupComponent,
     LoginComponent,
-    TermsComponent
+    TermsComponent,
+    SliderloaderComponent
   ],
   imports: [
     BrowserModule,
