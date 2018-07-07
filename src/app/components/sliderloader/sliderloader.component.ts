@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JsonService } from '../../services/json.service';
 
 @Component({
   selector: 'app-sliderloader',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SliderloaderComponent implements OnInit {
 
-  constructor() { }
+  public slides: any;
+
+  constructor(jsonService: JsonService) {
+
+    jsonService.getSlides().subscribe(data => {
+      this.slides = data;
+      console.log(this.slides);
+    });
+   }
 
   ngOnInit() {
   }
