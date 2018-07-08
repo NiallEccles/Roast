@@ -8,6 +8,7 @@ import { BasketState } from '../../../store/app.state';
 import { Basket } from '../../../store/models/basket.model'
 import * as BasketActions from '../../../store/actions/basket.actions';
 import { NotificationService } from '../../../services/notification/notification.service';
+import { AuthService } from '../../../services/auth/auth.service';
 
 @Component({
   selector: 'app-full',
@@ -30,15 +31,20 @@ import { NotificationService } from '../../../services/notification/notification
   ]
 })
 export class FullComponent implements OnInit {
-  constructor(private http: HttpClient, private jsonService: JsonService, private store: Store<BasketState>, private notification: NotificationService) {}
+  constructor(private http: HttpClient, private jsonService: JsonService, private store: Store<BasketState>, private notification: NotificationService, private authService: AuthService) {}
 
   goals = ['My first life goal', 'I want to climb a mountain', 'Go ice skiing'];
 
   public fooddata:any;
 
   getMenuItem(item){
-    this.store.dispatch(new BasketActions.AddBasket({item: item.title, price: item.price}));
-    this.notification.foodAdded.next(item.title);
+    if(this.authService.isAuth()){
+      this.store.dispatch(new BasketActions.AddBasket({item: item.title, price: item.price}));
+      this.notification.foodAdded.next('Added ' + item.title);
+    }
+    else{
+      this.notification.foodAdded.next('Login or Signup to add to your basket.');
+    }
   }
 
   ngOnInit() {}
