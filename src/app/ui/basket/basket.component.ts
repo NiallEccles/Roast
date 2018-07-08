@@ -14,8 +14,11 @@ export class BasketComponent implements OnInit {
 
   basket: Observable<Basket[]>;
 
-  constructor(private store: Store<BasketState>) { 
+  basketArray:any;
+
+  constructor(private store: Store<BasketState>) {
     this.basket = store.select('basket');
+    this.basketArray = {...this.store};
    }
 
    removeBasketItem(index){
@@ -23,6 +26,15 @@ export class BasketComponent implements OnInit {
    }
 
   ngOnInit() {
+  }
+
+  isBasketEmpty(){
+    if(this.basketArray.source.value.basket.length === 0){
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 
 }

@@ -9,7 +9,9 @@ import { AuthService } from '../../../services/auth/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+  public _error: string;
+
+  constructor(private authService: AuthService) {}
 
   ngOnInit() {
   }
@@ -20,6 +22,7 @@ export class LoginComponent implements OnInit {
       email: form.value.email,
       password: form.value.password
     });
+    this.authService.authError.subscribe(error => this._error = error);
   }
 
 }

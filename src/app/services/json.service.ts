@@ -12,4 +12,8 @@ export class JsonService {
   public getJSON(): Observable<any> {
     return this.http.get('./assets/food.json');
   }
+
+  public getSlides(): Observable<any> {
+    return this.http.get('./assets/slideloader.json');
+  }
 }

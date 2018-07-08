@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { JsonService } from '../../../services/json.service';
 import { trigger,style,transition,animate,keyframes,query,stagger } from '@angular/animations';
 import { Store } from '@ngrx/store';
 import { BasketState } from '../../../store/app.state';
 import { Basket } from '../../../store/models/basket.model'
 import * as BasketActions from '../../../store/actions/basket.actions';
+import { NotificationService } from '../../../services/notification/notification.service';
+import { AuthService } from '../../../services/auth/auth.service';
 
 @Component({
   selector: 'app-full',
@@ -29,14 +31,20 @@ import * as BasketActions from '../../../store/actions/basket.actions';
   ]
 })
 export class FullComponent implements OnInit {
-  constructor(private http: HttpClient, private jsonService: JsonService, private store: Store<BasketState>) {}
+  constructor(private http: HttpClient, private jsonService: JsonService, private store: Store<BasketState>, private notification: NotificationService, private authService: AuthService) {}
 
   goals = ['My first life goal', 'I want to climb a mountain', 'Go ice skiing'];
 
   public fooddata:any;
 
   getMenuItem(item){
-    this.store.dispatch(new BasketActions.AddBasket({item: item.title, price: item.price}))
+    if(this.authService.isAuth()){
+      this.store.dispatch(new BasketActions.AddBasket({item: item.title, price: item.price}));
+      this.notification.foodAdded.next('Added ' + item.title);
+    }
+    else{
+      this.notification.foodAdded.next('Login or Signup to add to your basket.');
+    }
   }
 
   ngOnInit() {}

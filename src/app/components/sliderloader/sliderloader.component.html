@@ -1,0 +1,13 @@
+<div class="slideloader-container">
+  <div class="slideloader-item" *ngFor="let slide of slides;">
+    <div class="slideloader-title">
+      {{ slide.title }}
+    </div>
+    <div class="slideloader-image" [style.background-image]="'url('+slide.image+')'">
+
+    </div>
+    <div class="slideloader-description">
+
+    </div>
+  </div>
+</div>

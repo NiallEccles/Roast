@@ -34,3 +34,11 @@
     cursor: pointer;
 }
 
+.error{
+    color:#FB3F39;
+}
+
+.input-error{
+    border: 2px solid #FB3F39;
+}
+

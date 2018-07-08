@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Burgers",
+    "image": "assets/images/slides/burger.png"
+  },
+  {
+    "title": "Vegan",
+    "image": "assets/images/slides/vegan.png"
+  },
+  {
+    "title": "Pasta",
+    "image": "assets/images/slides/pasta.png"
+  },
+  {
+    "title": "Noodles",
+    "image": "assets/images/slides/noodles.png"
+  },
+  {
+    "title": "Hot dog",
+    "image": "assets/images/slides/hotdog.png"
+  },
+  {
+    "title": "Coffee",
+    "image": "assets/images/slides/coffee.png"
+  }
+]

@@ -11,6 +11,7 @@
           required
           #emailInput="ngModel"
           class="input-field"
+          [ngClass]="{'input-error':emailInput.invalid && (emailInput.dirty || emailInput.touched)}"
         >
         <!-- <span *ngIf="emailInput.hasError('required')"> Email must not be empty </span> -->
         <br>
@@ -24,8 +25,12 @@
           minlength="6"
           #pwInput="ngModel"
           class="input-field"
+          [ngClass]="{'input-error':pwInput.invalid && (pwInput.dirty || pwInput.touched)}"
         >
         <br>
         <button class="button" type="submit">Submit</button>
+        <br>
+        <p class="error">{{ _error }}</p>
+        <br>
     </form>
   </div>

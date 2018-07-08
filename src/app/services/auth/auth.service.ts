@@ -1,6 +1,6 @@
 import { User } from './user.model';
 import { AuthData } from './auth-data.model';
-import { Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from 'angularfire2/auth';
@@ -9,6 +9,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 export class AuthService {
   authChange = new Subject<boolean>();
   private isAuthenticated = false;
+  authError = new Subject<string>();
 
   constructor(private router: Router, private roastauth: AngularFireAuth) {}
 
@@ -19,7 +20,7 @@ export class AuthService {
           this.authSuccessfully();
       })
       .catch(error => {
-          console.log(error);
+        this.authError.next(error.message);
       });
   }
   login(authData: AuthData) {
@@ -29,7 +30,7 @@ export class AuthService {
         this.authSuccessfully();
     })
     .catch(error => {
-        console.log(error);
+        this.authError.next(error.message);
     });
   }
 
