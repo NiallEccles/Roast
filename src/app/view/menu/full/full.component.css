@@ -44,10 +44,17 @@
 
 .menu-item-description {
     font-size: 0.8rem;
+    flex-grow: 1;
 }
 
 .menu-item-info{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-grow: 1;
+}
+
+.menu-item-add{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
