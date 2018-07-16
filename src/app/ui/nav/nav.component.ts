@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AuthService } from '../../services/auth/auth.service';
 import { Subscription, Subject } from 'rxjs';
 import { NotificationService } from '../../services/notification/notification.service';
+import { ThemeService } from '../../services/theme/theme.service';
 
 @Component({
   selector: '.nav',
@@ -18,8 +19,9 @@ export class NavComponent implements OnInit, OnDestroy {
   public icon = 'menu';
   public showNotification = false;
   public foodAdded;
+  private navTheme: string;
 
-  constructor(private authService: AuthService, private notification: NotificationService) {
+  constructor(private authService: AuthService, private notification: NotificationService, private theme: ThemeService) {
     this.notification.foodAdded.subscribe(e => {
       this.foodAdded = e;
       this.showNotification = true;
@@ -27,6 +29,9 @@ export class NavComponent implements OnInit, OnDestroy {
         this.showNotification = false;
         this.foodAdded = null;
       }, 2000);
+     });
+     this.theme.theme.subscribe(e => {
+      this.navTheme = e;
      });
   }
 
