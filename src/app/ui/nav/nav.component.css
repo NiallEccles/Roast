@@ -36,6 +36,10 @@ nav, .notification{
     list-style: none;
 }
 
+.dark>.links>ul>li>a{
+    color:#F6881E;
+}
+
 .links>ul>li>a{
     color:#2C1808;
     padding-right:1.5em;
