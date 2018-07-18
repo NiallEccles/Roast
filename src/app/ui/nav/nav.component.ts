@@ -39,6 +39,17 @@ export class NavComponent implements OnInit, OnDestroy {
     this.authSubscription = this.authService.authChange.subscribe(authStatus => {
       this.isAuth = authStatus;
     });
+    if(localStorage.getItem('theme') === null){
+      return;
+    }
+    else{
+      if(localStorage.getItem('theme') === 'light'){
+        this.navTheme = 'light';
+      }
+      else if(localStorage.getItem('theme') === 'dark'){
+        this.navTheme = 'dark';
+      }
+    }
   }
 
   ngOnDestroy() {

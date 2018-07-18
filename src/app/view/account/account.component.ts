@@ -11,7 +11,8 @@ import { ThemeService } from '../../services/theme/theme.service';
 export class AccountComponent implements OnInit {
   isAuth: boolean;
   authSubscription: Subscription;
-  test: boolean;
+  themeColour: string = 'light';
+  checked: boolean;
 
   constructor(private authService: AuthService, private theme: ThemeService) { }
 
@@ -19,6 +20,7 @@ export class AccountComponent implements OnInit {
     this.authSubscription = this.authService.authChange.subscribe(authStatus => {
       this.isAuth = authStatus;
     });
+    this.checkThemePreference();
   }
 
   logout() {
@@ -29,13 +31,31 @@ export class AccountComponent implements OnInit {
     this.authSubscription.unsubscribe();
   }
 
+  checkThemePreference(){
+    if(localStorage.getItem('theme') === null){
+      localStorage.setItem('theme', this.themeColour);
+      this.checked = false;
+    }
+    else{
+      this.themeColour = localStorage.getItem('theme');
+      if(localStorage.getItem('theme') === 'light'){
+        this.checked = false;
+      }
+      else{
+        this.checked = true;
+      }
+    }
+  }
+
   checkClicked(val){
     if(val){
-      this.test = false;
+      this.checked = false;
       this.theme.theme.next('light');
+      localStorage.setItem('theme', 'light');
     } else{
-      this.test = true;
+      this.checked = true;
       this.theme.theme.next('dark');
+      localStorage.setItem('theme', 'dark');
     }
 }
 

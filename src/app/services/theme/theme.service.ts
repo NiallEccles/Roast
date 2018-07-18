@@ -11,6 +11,6 @@ export class ThemeService {
   constructor() { }
 
   getTheme(theme) {
-    return theme;
+    return this.theme;
   }
 }
