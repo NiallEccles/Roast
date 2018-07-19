@@ -12,3 +12,20 @@
 .full>p{
     padding: 0 1em;
 }
+
+.button{
+    padding: 0.5em 1em;
+    border: none;
+    background: none;
+    border: 2px solid #2c1808;
+    color: #ee841d;
+    text-transform: uppercase;
+    margin-top: 10%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.button:hover{
+    background: #2c1808;  
+}
