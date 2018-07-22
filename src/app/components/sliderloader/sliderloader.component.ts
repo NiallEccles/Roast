@@ -26,6 +26,7 @@ export class SliderloaderComponent implements OnInit {
         }
         else{
           this.slides = JSON.parse(localStorage.getItem('slides'));
+          localStorage.setItem('storeTime', new Date().getHours().toString());
         }
       }
       console.log(this.slides);
