@@ -1,0 +1,21 @@
+.footer{
+    min-height: 60px;
+    background: #2C1808;
+    display: flex;
+    padding: 0 1em;
+    color: #F6881E;
+    z-index: 99999999999;
+}
+
+.footer-title{
+    color: #F6881E;
+    flex-grow: 1;
+}
+
+.footer-icon{
+
+}
+
+.footer-links{
+
+}
