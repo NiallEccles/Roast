@@ -28,6 +28,7 @@ export class AuthService {
     .then(result => {
         console.log(result);
         this.authSuccessfully();
+        document.cookie = 'UIATOF=True;expires=0;path=/';
     })
     .catch(error => {
         this.authError.next(error.message);
