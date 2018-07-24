@@ -1,0 +1,21 @@
+.tile{
+    background-size: cover;
+    background-position: top;
+    padding: 1em;
+    color:#ffffff;
+}
+
+.tile-button{
+    padding: 0.5em 1em;
+    border: none;
+    background: none;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-top: 5%;
+    margin-left: 50%;
+    margin-bottom: 5%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    cursor: pointer;
+}

@@ -24,6 +24,8 @@ import { AuthService } from './services/auth/auth.service';
 import { AuthGuard } from './services/auth/auth.guard';
 import { TermsComponent } from './view/terms/terms.component';
 import { SliderloaderComponent } from './components/sliderloader/sliderloader.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { TileComponent } from './components/tile/tile.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -48,7 +50,9 @@ const appRoutes: Routes = [
     SignupComponent,
     LoginComponent,
     TermsComponent,
-    SliderloaderComponent
+    SliderloaderComponent,
+    FooterComponent,
+    TileComponent
   ],
   imports: [
     BrowserModule,
