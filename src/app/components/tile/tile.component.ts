@@ -10,6 +10,7 @@ export class TileComponent implements OnInit {
   @Input() tileTitle: string;
   @Input() tileDescription: string;
   @Input() tileButtonText: string;
+  @Input() tileImage: string;
 
   constructor() { }
 
