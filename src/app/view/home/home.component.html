@@ -1,10 +1,16 @@
 <div class="full">
     <h1>Roast</h1>
-    <h2>Food made to order.</h2>
-    <p>We take food seriously. That's why we prepare all our meals fresh.</p>
+    <app-tile 
+        tileTitle="Food made to order." 
+        tileDescription="We take food seriously. That's why we prepare all our meals fresh.">
+    </app-tile>
     <p>Relax, we have dinner sorted.</p>
     <app-sliderloader></app-sliderloader>
     <button class="button" [routerLink]="['/account/login']">Order now</button>
-    <app-tile></app-tile>
+    <app-tile 
+        tileTitle="Food for everyone." 
+        tileDescription="Breakfast, Lunch and Dinner." 
+        tileButtonText="Our Menu">
+    </app-tile>
 </div>
 <app-footer></app-footer>
