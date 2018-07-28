@@ -2,9 +2,15 @@
     min-height: 60px;
     background: #2C1808;
     display: flex;
+    flex-direction: column;
     padding: 0 1em;
     color: #F6881E;
     z-index: 99999999999;
+}
+
+.footer-head{
+    display: flex;
+    flex-direction: row;
 }
 
 .footer-title{
@@ -17,5 +23,20 @@
 }
 
 .footer-links{
+    display: flex;
+    flex-direction: column;
+}
 
+.footer-links ul{
+    list-style: none;
+    padding: 0; 
+}
+
+.footer-links ul li{
+    margin: 0.5em 0;
+}
+
+.footer-links ul li a{
+    color: #F6881E;
+    text-decoration: none;
 }
