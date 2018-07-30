@@ -26,6 +26,7 @@ import { TermsComponent } from './view/terms/terms.component';
 import { SliderloaderComponent } from './components/sliderloader/sliderloader.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TileComponent } from './components/tile/tile.component';
+import { BrickComponent } from './components/brick/brick.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -52,7 +53,8 @@ const appRoutes: Routes = [
     TermsComponent,
     SliderloaderComponent,
     FooterComponent,
-    TileComponent
+    TileComponent,
+    BrickComponent
   ],
   imports: [
     BrowserModule,
