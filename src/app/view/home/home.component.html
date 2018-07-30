@@ -5,9 +5,11 @@
         tileTitle="Food made to order." 
         tileDescription="We take food seriously. That's why we prepare all our meals fresh.">
     </app-tile>
-    <p>Relax, we have dinner sorted.</p>
     <app-sliderloader></app-sliderloader>
-    <button class="button" [routerLink]="['/account/login']">Order now</button>
+    <app-brick
+        brickContent="Relax, we have dinner sorted."
+        brickButtonText="Order Now"
+    ></app-brick>
     <app-tile
         tileImage="duotone_roast2.png" 
         tileTitle="Food for everyone." 
