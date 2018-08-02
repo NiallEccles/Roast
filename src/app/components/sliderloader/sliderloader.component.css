@@ -6,6 +6,22 @@
     white-space: nowrap;
 }
 
+::-webkit-scrollbar {
+    height: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
 .slideloader-item{
     width: 50%;
     max-width: 190px;

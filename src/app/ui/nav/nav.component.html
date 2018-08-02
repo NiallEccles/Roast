@@ -1,4 +1,4 @@
-<nav>
+<nav [ngClass]="{'dark':navTheme === 'dark'}">
   <div class="brand" [routerLink]="['/']">Roast</div>
   <div class="links" [ngClass]="{'show':navOpen}">
     <ul *ngIf="isAuth">

@@ -1,3 +1,8 @@
+nav.dark{
+    background: #2C1808;
+    color: #F6881E;
+}
+
 nav, .notification{
     min-height: 60px;
     background: #F6881E;
@@ -29,6 +34,10 @@ nav, .notification{
 
 .links>ul{
     list-style: none;
+}
+
+.dark>.links>ul>li>a{
+    color:#F6881E;
 }
 
 .links>ul>li>a{

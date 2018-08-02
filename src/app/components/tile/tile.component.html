@@ -1,0 +1,5 @@
+<div class="tile" [style.background-image]="'url(assets/images/' + tileImage + ')'">
+  <h2 *ngIf="tileTitle" class="tile-title">{{ tileTitle }}</h2>
+  <p *ngIf="tileDescription" class="tile-description">{{ tileDescription }}</p>
+  <button *ngIf="tileButtonText" class="tile-button" [routerLink]="['/menu/full']">{{ tileButtonText }}</button>
+</div>

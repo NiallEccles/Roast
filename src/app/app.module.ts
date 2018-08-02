@@ -24,10 +24,13 @@ import { AuthService } from './services/auth/auth.service';
 import { AuthGuard } from './services/auth/auth.guard';
 import { TermsComponent } from './view/terms/terms.component';
 import { SliderloaderComponent } from './components/sliderloader/sliderloader.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { TileComponent } from './components/tile/tile.component';
+import { BrickComponent } from './components/brick/brick.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'menu/full', component: FullComponent, canActivate: [AuthGuard] },
+  { path: 'menu/full', component: FullComponent },
   { path: 'basket', component: BasketComponent, canActivate: [AuthGuard] },
   { path: 'account', component: AccountComponent },
   { path: 'account/signup', component: SignupComponent },
@@ -48,7 +51,10 @@ const appRoutes: Routes = [
     SignupComponent,
     LoginComponent,
     TermsComponent,
-    SliderloaderComponent
+    SliderloaderComponent,
+    FooterComponent,
+    TileComponent,
+    BrickComponent
   ],
   imports: [
     BrowserModule,
