@@ -45,6 +45,64 @@
             "price": "6.99"
         }   
     ],
+    "burgers":[
+        {
+            "title": "Burger Sliders",
+            "ingredients": "bacon, onions, garlic, ground beef, worcestershire sauce, salt, sandwich rolls",
+            "price": "7.99"
+        },
+        {
+            "title": "Bacon & Tomato Burger",
+            "ingredients": "bacon, cheese, garlic, ground beef, hamburger bun, mushroom, salt, sun dried tomato, onions, tomato, worcestershire sauce",
+            "price": "9.99"
+        },
+        {
+            "title": "Black Angus Burger with Cheddar Cheese & Grilled Green Chile",
+            "ingredients": "beef, poblano pepper, cheddar cheese, sandwich rolls, lettuce, red onions, poblano chile, salt",
+            "price": "9.99"
+        }
+    ],
+    "pasta":[
+        {
+            "title": "Pasta Delight",
+            "ingredients": "pasta, butter, red onions, tomato, roasted red peppers, red onions, basil, butter, flour, milk, cheddar cheese, parmesan cheese",
+            "price": "6.99"
+        },
+        {
+            "title": "Pasta I Fagioli",
+            "ingredients": "bay leaves, black pepper, garlic, romano cheese, parsley, olive oil, salt, tomato",
+            "price": "7.99"
+        },
+        {
+            "title": "Pasta Fazool",
+            "ingredients": "cayenne, oregano, thyme, parsley, garlic, ground beef, black pepper, sausage, kidney bean, onions, parmesan cheese, penne, tomato, provolone cheese, salt, tomato paste",
+            "price": "8.99"
+        }
+    ],
+    "noodles":[
+        {
+            "title": "Quick Chicken and Noodles",
+            "ingredients": "black pepper, chicken, basil, garlic powder, egg noodles, paprika, chicken broth, cauliflower",
+            "price": "5.99"
+        },
+        {
+            "title": "Stir-Fry Noodles",
+            "ingredients": "green onion, pork, mushroom, vegetable oil, sauce",
+            "price": "7.99"
+        }
+    ],
+    "hot_dogs":[
+        {
+            "title": "Chili Hotdog",
+            "ingredients": "ground beef, onions, ketchup, chili powder",
+            "price": "6.99"
+        },
+        {
+            "title": "Old Fashioned Hotdog",
+            "ingredients": "ground beef",
+            "price": "6.99"
+        }
+    ],
     "hot drinks":[
         {
             "title": "Hot Spiced Cider",
