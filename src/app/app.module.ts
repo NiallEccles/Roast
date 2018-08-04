@@ -31,6 +31,7 @@ import { BrickComponent } from './components/brick/brick.component';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'menu/full', component: FullComponent },
+  { path: 'menu/:id', component: MenuComponent },
   { path: 'basket', component: BasketComponent, canActivate: [AuthGuard] },
   { path: 'account', component: AccountComponent },
   { path: 'account/signup', component: SignupComponent },
