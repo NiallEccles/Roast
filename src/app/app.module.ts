@@ -27,6 +27,7 @@ import { SliderloaderComponent } from './components/sliderloader/sliderloader.co
 import { FooterComponent } from './components/footer/footer.component';
 import { TileComponent } from './components/tile/tile.component';
 import { BrickComponent } from './components/brick/brick.component';
+import { LowercaseReplaceCasePipe } from './pipes/lowercase-replace-case.pipe';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -55,7 +56,8 @@ const appRoutes: Routes = [
     SliderloaderComponent,
     FooterComponent,
     TileComponent,
-    BrickComponent
+    BrickComponent,
+    LowercaseReplaceCasePipe
   ],
   imports: [
     BrowserModule,
