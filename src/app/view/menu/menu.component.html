@@ -1,3 +1,42 @@
-<p>
-  menu works!
-</p>
+<div class="full" *ngIf="!fooddata">
+    <div>
+        <app-brick
+            brickContent="No {{urlfood}} found."
+            brickButtonText="View full menu"
+        ></app-brick>
+    </div>
+</div>
+<div class="full" *ngIf="fooddata">
+    <div class="menu-item-category">
+        <h3>{{ urlfood }}</h3>
+        <div class="menu-item" *ngFor="let food of fooddata let i = index;">
+            <div (click)="getMenuItem(food)">
+                <div class="menu-item-heading">
+                    <div class="menu-item-title">
+                        {{ food.title }}
+                    </div>
+                    <div class="menu-item-divider"></div>
+                    <div class="menu-item-price">
+                        €{{ food.price }}
+                    </div>
+                </div>
+                <div class="menu-item-info">
+                    <div class="menu-item-description">
+                        {{ food.ingredients }}
+                    </div>
+                    <div class="menu-item-add">
+                        <i class="material-icons">
+                            add
+                        </i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <app-brick
+                brickContent="That's all we have for this item."
+                brickButtonText="View full menu"
+            ></app-brick>
+        </div>
+    </div>
+</div>

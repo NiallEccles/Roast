@@ -1,5 +1,5 @@
 <div class="slideloader-container">
-  <div class="slideloader-item" *ngFor="let slide of slides;">
+  <div class="slideloader-item" [routerLink]="['menu/' + slide.title | lowercaseReplaceCase]" *ngFor="let slide of slides;">
     <div class="slideloader-title">
       {{ slide.title }}
     </div>

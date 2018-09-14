@@ -1,0 +1,61 @@
+.full{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.menu-item-category>h3{
+    padding: 0 1em;
+    color: #f6871f;
+    text-transform: capitalize;
+}
+
+.menu-item{
+    flex-direction: row;
+    padding: 1em;
+    margin: 0.5em 0;
+}
+
+.menu-item-heading{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    align-items: baseline;
+}
+
+.menu-item-title{
+    display: flex;
+    flex-grow: 1;
+}
+
+.menu-item-divider{
+    display: flex;
+    flex-grow: 1;
+}
+
+.menu-item-price{
+    display: flex;
+    font-size: 0.8rem;
+    color: #f6871f;
+}
+
+.margin-bottom{
+    margin-bottom: 60px;
+}
+
+.menu-item-description {
+    font-size: 0.8rem;
+    flex-grow: 1;
+}
+
+.menu-item-info{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.menu-item-add{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
