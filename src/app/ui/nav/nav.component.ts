@@ -19,7 +19,7 @@ export class NavComponent implements OnInit, OnDestroy {
   public icon = 'menu';
   public showNotification = false;
   public foodAdded;
-  private navTheme: string;
+  public navTheme: string;
 
   constructor(private authService: AuthService, private notification: NotificationService, private theme: ThemeService) {
     this.notification.foodAdded.subscribe(e => {
